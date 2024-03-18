@@ -36,7 +36,6 @@
     "eslint": "^8.57.0",
     "eslint-config-prettier": "^9.1.0",
     "eslint-plugin-jsdoc": "^48.2.1",
-    "mdast-util-mdx-jsx": "^3.1.2",
     "prettier": "^3.2.5",
     "rehype-stringify": "^10.0.0",
     "remark-parse": "^11.0.0",
@@ -46,6 +45,7 @@
   },
   "dependencies": {
     "hast-util-is-element": "^3.0.0",
+    "mdast-util-mdx-jsx": "^3.1.2",
     "rehype": "^13.0.1",
     "unified": "^11.0.4",
     "unist-util-visit": "^5.0.0"
