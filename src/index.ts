@@ -1,7 +1,16 @@
+import "mdast-util-mdx-jsx";
+import type { ElementContent, Root } from "hast";
 import type { Plugin, Transformer } from "unified";
-import type { Root } from "hast";
 import { isElement } from "hast-util-is-element";
 import { visit } from "unist-util-visit";
+
+/**
+ * Check if a node is an image.
+ * @param node Node to check
+ * @returns `true` if the node is an image, `false` otherwise
+ */
+const isImage = (node: ElementContent): boolean =>
+    isElement(node, "img") || (node.type === "mdxJsxFlowElement" && node.name === "astro-image");
 
 /**
  * `rehype` plugin to set captions for images in addition to alt text.
@@ -43,7 +52,7 @@ const rehypeImageCaption: Plugin<[], Root> = () => {
      */
     const transformer: Transformer<Root> = (tree) => {
         visit(tree, "element", (node) => {
-            if (!(node.tagName === "p" && isElement(node.children[0], "img"))) return;
+            if (!(node.tagName === "p" && isImage(node.children[0]))) return;
 
             // eslint-disable-next-line no-magic-numbers
             if (node.children.length === 1) {
