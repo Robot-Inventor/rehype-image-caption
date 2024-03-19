@@ -38,6 +38,7 @@
     "eslint-plugin-jsdoc": "^48.2.1",
     "prettier": "^3.2.5",
     "rehype-stringify": "^10.0.0",
+    "remark-breaks": "^4.0.0",
     "remark-parse": "^11.0.0",
     "remark-rehype": "^11.1.0",
     "typescript": "^5.4.2",
