@@ -50,7 +50,9 @@ const rehypeImageCaption: Plugin<[], Root> = () => {
      * Transformer
      * @param tree Root node
      */
+    // eslint-disable-next-line max-lines-per-function
     const transformer: Transformer<Root> = (tree) => {
+        // eslint-disable-next-line max-lines-per-function
         visit(tree, "element", (node) => {
             if (!(node.tagName === "p" && isImage(node.children[0]))) return;
 
@@ -88,6 +90,25 @@ const rehypeImageCaption: Plugin<[], Root> = () => {
                         tagName: "figcaption",
                         properties: {},
                         children: node.children[2].children
+                    }
+                ];
+            } else if (
+                // eslint-disable-next-line no-magic-numbers
+                node.children.length === 4 &&
+                isElement(node.children[1], "br") &&
+                node.children[2].type === "text" &&
+                node.children[2].value.trim() === "" &&
+                isElement(node.children[3], "em")
+            ) {
+                // Image with caption with line break (with remark-breaks plugin)
+                node.tagName = "figure";
+                node.children = [
+                    node.children[0],
+                    {
+                        type: "element",
+                        tagName: "figcaption",
+                        properties: {},
+                        children: node.children[3].children
                     }
                 ];
             }
