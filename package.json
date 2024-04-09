@@ -31,11 +31,8 @@
   },
   "homepage": "https://github.com/Robot-Inventor/rehype-image-caption#readme",
   "devDependencies": {
-    "@typescript-eslint/eslint-plugin": "^7.2.0",
-    "@typescript-eslint/parser": "^7.2.0",
-    "eslint": "^8.57.0",
-    "eslint-config-prettier": "^9.1.0",
-    "eslint-plugin-jsdoc": "^48.2.1",
+    "@robot-inventor/eslint-config": "^0.1.1",
+    "eslint": "^9.0.0",
     "prettier": "^3.2.5",
     "rehype-stringify": "^10.0.0",
     "remark-breaks": "^4.0.0",
