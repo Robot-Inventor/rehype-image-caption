@@ -2,6 +2,9 @@
   "name": "rehype-image-caption",
   "version": "2.0.1",
   "description": "rehype plugin to set captions for images in addition to alt text.",
+  "publishConfig": {
+    "provenance": true
+  },
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
   "files": [
@@ -14,7 +17,9 @@
     "version": "npm run build && git add .",
     "format": "prettier ./src/ --write",
     "format:check": "prettier ./src/ --check",
-    "lint": "npx eslint ./src/**/*.ts"
+    "lint": "npx eslint ./src/**/*.ts",
+    "changeset-version": "changeset version && npm run version",
+    "changeset-publish": "npm run build && changeset publish"
   },
   "repository": {
     "type": "git",
@@ -31,6 +36,8 @@
   },
   "homepage": "https://github.com/Robot-Inventor/rehype-image-caption#readme",
   "devDependencies": {
+    "@changesets/changelog-github": "^0.5.0",
+    "@changesets/cli": "^2.27.1",
     "@robot-inventor/eslint-config": "^0.1.1",
     "eslint": "^9.0.0",
     "prettier": "^3.2.5",
