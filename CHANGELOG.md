@@ -1,5 +1,11 @@
 # rehype-image-caption
 
+## 2.0.4
+
+### Patch Changes
+
+-   [#58](https://github.com/Robot-Inventor/rehype-image-caption/pull/58) [`e6b1eec`](https://github.com/Robot-Inventor/rehype-image-caption/commit/e6b1eec43e546b6ded09040a0407790376dd510a) Thanks [@dependabot](https://github.com/apps/dependabot)! - build(deps-dev): bump braces from 3.0.2 to 3.0.3
+
 ## 2.0.3
 
 ### Patch Changes
