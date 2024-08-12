@@ -1,3 +1,4 @@
+// eslint-disable-next-line import-x/no-unassigned-import
 import "mdast-util-mdx-jsx";
 import type { ElementContent, Root } from "hast";
 import type { Plugin, Transformer } from "unified";
@@ -10,7 +11,7 @@ import { visit } from "unist-util-visit";
  * @returns `true` if the node is an image, `false` otherwise
  */
 const isImage = (node: ElementContent): boolean =>
-    isElement(node, "img") || (node.type === "mdxJsxFlowElement" && ["astro-image", "img"].includes(node.name || ""));
+    isElement(node, "img") || (node.type === "mdxJsxFlowElement" && ["astro-image", "img"].includes(node.name ?? ""));
 
 /**
  * `rehype` plugin to set captions for images in addition to alt text.
