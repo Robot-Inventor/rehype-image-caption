@@ -1,5 +1,11 @@
 # rehype-image-caption
 
+## 2.0.6
+
+### Patch Changes
+
+-   [#94](https://github.com/Robot-Inventor/rehype-image-caption/pull/94) [`9df5d90`](https://github.com/Robot-Inventor/rehype-image-caption/commit/9df5d904e63473adf38310ee1fb3da8c1d4991b0) Thanks [@Robot-Inventor](https://github.com/Robot-Inventor)! - fix: fix some ESLint errors
+
 ## 2.0.5
 
 ### Patch Changes
