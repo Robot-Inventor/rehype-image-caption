@@ -10,9 +10,16 @@ import { visit } from "unist-util-visit";
  * @param node Node to check
  * @returns `true` if the node is an image, `false` otherwise
  */
-const isImage = (node: ElementContent): boolean =>
-    isElement(node, "img") || (node.type === "mdxJsxFlowElement" && ["astro-image", "img"].includes(node.name ?? ""));
-
+const isImage = (node: ElementContent): boolean => {
+    try {
+        if (node.type === "mdxJsxFlowElement" && ["astro-image", "img"].includes(node.name ?? "")) {
+            return true;
+        }
+        return isElement(node, "img");
+    } catch {
+        return false;
+    }
+};
 /**
  * `rehype` plugin to set captions for images in addition to alt text.
  * @returns Transformer
