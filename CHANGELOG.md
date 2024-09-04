@@ -1,5 +1,11 @@
 # rehype-image-caption
 
+## 2.0.8
+
+### Patch Changes
+
+-   [#105](https://github.com/Robot-Inventor/rehype-image-caption/pull/105) [`5b50a1d`](https://github.com/Robot-Inventor/rehype-image-caption/commit/5b50a1dd9c4941cfd31765ce0b7bfb561b270591) Thanks [@Yash-Garg](https://github.com/Yash-Garg)! - Wrap isImage in a try-catch block
+
 ## 2.0.7
 
 ### Patch Changes
