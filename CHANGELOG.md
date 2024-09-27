@@ -1,5 +1,13 @@
 # rehype-image-caption
 
+## 2.0.10
+
+### Patch Changes
+
+-   [#123](https://github.com/Robot-Inventor/rehype-image-caption/pull/123) [`042574c`](https://github.com/Robot-Inventor/rehype-image-caption/commit/042574c5bc875eb5d3a99bdb64c5b443217aaba5) Thanks [@renovate](https://github.com/apps/renovate)! - fix(deps): update dependency rehype to v13.0.2
+
+-   [#122](https://github.com/Robot-Inventor/rehype-image-caption/pull/122) [`16b6786`](https://github.com/Robot-Inventor/rehype-image-caption/commit/16b678616f78b0cb49a1765dcc597cefa719ccf2) Thanks [@renovate](https://github.com/apps/renovate)! - chore(deps): update dependency rehype-stringify to v10.0.1
+
 ## 2.0.9
 
 ### Patch Changes
