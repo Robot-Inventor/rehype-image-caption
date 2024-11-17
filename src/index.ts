@@ -60,21 +60,24 @@ const rehypeImageCaption: Plugin<[], Root> = () => {
      */
     // eslint-disable-next-line max-lines-per-function
     const transformer: Transformer<Root> = (tree) => {
-        // eslint-disable-next-line max-lines-per-function
+        // eslint-disable-next-line max-lines-per-function, max-statements
         visit(tree, "element", (node) => {
-            if (!(node.tagName === "p" && isImage(node.children[0]))) return;
+            const [firstChild] = node.children;
+            if (!firstChild) return;
+
+            if (!(node.tagName === "p" && isImage(firstChild))) return;
 
             // eslint-disable-next-line no-magic-numbers
             if (node.children.length === 1) {
                 // Image without caption
                 node.tagName = "figure";
-                node.children = [node.children[0]];
+                node.children = [firstChild];
                 // eslint-disable-next-line no-magic-numbers
             } else if (node.children.length === 2 && isElement(node.children[1], "em")) {
                 // Image with caption without line break
                 node.tagName = "figure";
                 node.children = [
-                    node.children[0],
+                    firstChild,
                     {
                         type: "element",
                         tagName: "figcaption",
@@ -85,6 +88,7 @@ const rehypeImageCaption: Plugin<[], Root> = () => {
             } else if (
                 // eslint-disable-next-line no-magic-numbers
                 node.children.length === 3 &&
+                node.children[1] &&
                 node.children[1].type === "text" &&
                 node.children[1].value.trim() === "" &&
                 isElement(node.children[2], "em")
@@ -92,7 +96,7 @@ const rehypeImageCaption: Plugin<[], Root> = () => {
                 // Image with caption with line break
                 node.tagName = "figure";
                 node.children = [
-                    node.children[0],
+                    firstChild,
                     {
                         type: "element",
                         tagName: "figcaption",
@@ -104,6 +108,7 @@ const rehypeImageCaption: Plugin<[], Root> = () => {
                 // eslint-disable-next-line no-magic-numbers
                 node.children.length === 4 &&
                 isElement(node.children[1], "br") &&
+                node.children[2] &&
                 node.children[2].type === "text" &&
                 node.children[2].value.trim() === "" &&
                 isElement(node.children[3], "em")
@@ -111,7 +116,7 @@ const rehypeImageCaption: Plugin<[], Root> = () => {
                 // Image with caption with line break (with remark-breaks plugin)
                 node.tagName = "figure";
                 node.children = [
-                    node.children[0],
+                    firstChild,
                     {
                         type: "element",
                         tagName: "figcaption",
