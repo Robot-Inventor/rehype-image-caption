@@ -1,5 +1,13 @@
 # rehype-image-caption
 
+## 2.0.11
+
+### Patch Changes
+
+-   [#142](https://github.com/Robot-Inventor/rehype-image-caption/pull/142) [`5413afb`](https://github.com/Robot-Inventor/rehype-image-caption/commit/5413afbe3e21745f929eb39b6efdf193e4e88b77) Thanks [@Robot-Inventor](https://github.com/Robot-Inventor)! - fix: resolve TypeScript type errors
+
+-   [#141](https://github.com/Robot-Inventor/rehype-image-caption/pull/141) [`93a1907`](https://github.com/Robot-Inventor/rehype-image-caption/commit/93a1907dce96aa1663de7c8ae1f3663f7472001c) Thanks [@Robot-Inventor](https://github.com/Robot-Inventor)! - chore: update vulnerable dependencies
+
 ## 2.0.10
 
 ### Patch Changes
