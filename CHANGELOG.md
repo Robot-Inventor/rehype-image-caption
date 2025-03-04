@@ -1,5 +1,13 @@
 # rehype-image-caption
 
+## 2.0.14
+
+### Patch Changes
+
+- [#197](https://github.com/Robot-Inventor/rehype-image-caption/pull/197) [`baf98cd`](https://github.com/Robot-Inventor/rehype-image-caption/commit/baf98cd5aaab454b042bf6dc0b4ba3db2078eaa2) Thanks [@Robot-Inventor](https://github.com/Robot-Inventor)! - ci: add GitHub Actions workflow to verify successful build
+
+- [#196](https://github.com/Robot-Inventor/rehype-image-caption/pull/196) [`9528e5c`](https://github.com/Robot-Inventor/rehype-image-caption/commit/9528e5c3b8fed1c8a64266f23de5a667621da332) Thanks [@Robot-Inventor](https://github.com/Robot-Inventor)! - chore: update vulnerable dependencies
+
 ## 2.0.13
 
 ### Patch Changes
