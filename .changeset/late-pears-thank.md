@@ -1,5 +1,0 @@
----
-"rehype-image-caption": patch
----
-
-chore(deps): update dependency remark-rehype to v11.1.2

@@ -1,5 +1,11 @@
 # rehype-image-caption
 
+## 2.0.15
+
+### Patch Changes
+
+- [#207](https://github.com/Robot-Inventor/rehype-image-caption/pull/207) [`752268a`](https://github.com/Robot-Inventor/rehype-image-caption/commit/752268a30cb0e13c1daa2deb76e32f0ba3472e45) Thanks [@renovate](https://github.com/apps/renovate)! - chore(deps): update dependency remark-rehype to v11.1.2
+
 ## 2.0.14
 
 ### Patch Changes
