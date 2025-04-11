@@ -1,5 +1,11 @@
 # rehype-image-caption
 
+## 2.0.16
+
+### Patch Changes
+
+- [#213](https://github.com/Robot-Inventor/rehype-image-caption/pull/213) [`bb3e5fa`](https://github.com/Robot-Inventor/rehype-image-caption/commit/bb3e5faeef798b01c9e0167c34456b08813d491c) Thanks [@dependabot](https://github.com/apps/dependabot)! - build(deps-dev): bump vite from 6.2.5 to 6.2.6
+
 ## 2.0.15
 
 ### Patch Changes
