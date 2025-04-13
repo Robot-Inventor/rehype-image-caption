@@ -30,7 +30,7 @@ const isImage = (node: ElementContent): boolean => {
     }
 };
 
-const NodeChildrenCount = {
+const ImageChildCounts = {
     SINGLE_IMAGE: 1,
     IMAGE_WITH_CAPTION: 2,
     IMAGE_WITH_LINEBREAK_CAPTION: 3,
@@ -86,14 +86,14 @@ const rehypeImageCaption: Plugin<[Options?], Root> = (options: Options = { wrapI
             if (!(node.tagName === "p" && isImage(firstChild))) return;
 
             // Image without caption
-            if (node.children.length === NodeChildrenCount.SINGLE_IMAGE && options.wrapImagesWithoutCaptions) {
+            if (node.children.length === ImageChildCounts.SINGLE_IMAGE && options.wrapImagesWithoutCaptions) {
                 node.tagName = "figure";
                 node.children = [firstChild];
                 return;
             }
 
             // Image with caption without line break
-            if (node.children.length === NodeChildrenCount.IMAGE_WITH_CAPTION && isElement(node.children[1], "em")) {
+            if (node.children.length === ImageChildCounts.IMAGE_WITH_CAPTION && isElement(node.children[1], "em")) {
                 node.tagName = "figure";
                 node.children = [
                     firstChild,
@@ -109,7 +109,7 @@ const rehypeImageCaption: Plugin<[Options?], Root> = (options: Options = { wrapI
 
             // Image with caption with line break
             if (
-                node.children.length === NodeChildrenCount.IMAGE_WITH_LINEBREAK_CAPTION &&
+                node.children.length === ImageChildCounts.IMAGE_WITH_LINEBREAK_CAPTION &&
                 node.children[1] &&
                 node.children[1].type === "text" &&
                 node.children[1].value.trim() === "" &&
@@ -130,7 +130,7 @@ const rehypeImageCaption: Plugin<[Options?], Root> = (options: Options = { wrapI
 
             // Image with caption with line break (with remark-breaks plugin)
             if (
-                node.children.length === NodeChildrenCount.IMAGE_WITH_REMARK_BREAKS_CAPTION &&
+                node.children.length === ImageChildCounts.IMAGE_WITH_REMARK_BREAKS_CAPTION &&
                 isElement(node.children[1], "br") &&
                 node.children[2] &&
                 node.children[2].type === "text" &&
