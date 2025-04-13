@@ -53,6 +53,15 @@ The above code will output the following:
 </figure>
 ```
 
+## Options
+
+### `wrapImagesWithoutCaptions`
+
+- Type: `boolean`
+- Default: `true`
+
+Wrap images without captions in a `<figure>` tag. If set to `false`, images without captions will not be wrapped in a `<figure>` tag.
+
 ## Development
 
 ### Build
