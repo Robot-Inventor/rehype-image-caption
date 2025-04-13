@@ -1,5 +1,17 @@
 # rehype-image-caption
 
+## 2.1.0
+
+### Minor Changes
+
+- [#217](https://github.com/Robot-Inventor/rehype-image-caption/pull/217) [`c1f141d`](https://github.com/Robot-Inventor/rehype-image-caption/commit/c1f141dcfbaa83f3fb69af35dc1c6b66ced40dfc) Thanks [@Robot-Inventor](https://github.com/Robot-Inventor)! - feat: add the `wrapImagesWithoutCaptions` option
+
+### Patch Changes
+
+- [#215](https://github.com/Robot-Inventor/rehype-image-caption/pull/215) [`44f15ac`](https://github.com/Robot-Inventor/rehype-image-caption/commit/44f15ac8d77e0c7d10c95fbcc9765126cb2a3823) Thanks [@Robot-Inventor](https://github.com/Robot-Inventor)! - chore: update vulnerable dependencies
+
+- [#218](https://github.com/Robot-Inventor/rehype-image-caption/pull/218) [`c6f270c`](https://github.com/Robot-Inventor/rehype-image-caption/commit/c6f270cfce32b79f37f2e54a0b171d448c2b77a6) Thanks [@Robot-Inventor](https://github.com/Robot-Inventor)! - refactor: refactor image handling logic
+
 ## 2.0.16
 
 ### Patch Changes
