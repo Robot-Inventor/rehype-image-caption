@@ -30,6 +30,13 @@ const isImage = (node: ElementContent): boolean => {
     }
 };
 
+const NodeChildrenCount = {
+    SINGLE_IMAGE: 1,
+    IMAGE_WITH_CAPTION: 2,
+    IMAGE_WITH_LINEBREAK_CAPTION: 3,
+    IMAGE_WITH_REMARK_BREAKS_CAPTION: 4
+} as const;
+
 /**
  * `rehype` plugin to set captions for images in addition to alt text.
  * @param options Options
@@ -78,14 +85,15 @@ const rehypeImageCaption: Plugin<[Options?], Root> = (options: Options = { wrapI
 
             if (!(node.tagName === "p" && isImage(firstChild))) return;
 
-            // eslint-disable-next-line no-magic-numbers
-            if (node.children.length === 1 && options.wrapImagesWithoutCaptions) {
-                // Image without caption
+            // Image without caption
+            if (node.children.length === NodeChildrenCount.SINGLE_IMAGE && options.wrapImagesWithoutCaptions) {
                 node.tagName = "figure";
                 node.children = [firstChild];
-                // eslint-disable-next-line no-magic-numbers
-            } else if (node.children.length === 2 && isElement(node.children[1], "em")) {
-                // Image with caption without line break
+                return;
+            }
+
+            // Image with caption without line break
+            if (node.children.length === NodeChildrenCount.IMAGE_WITH_CAPTION && isElement(node.children[1], "em")) {
                 node.tagName = "figure";
                 node.children = [
                     firstChild,
@@ -96,15 +104,17 @@ const rehypeImageCaption: Plugin<[Options?], Root> = (options: Options = { wrapI
                         children: node.children[1].children
                     }
                 ];
-            } else if (
-                // eslint-disable-next-line no-magic-numbers
-                node.children.length === 3 &&
+                return;
+            }
+
+            // Image with caption with line break
+            if (
+                node.children.length === NodeChildrenCount.IMAGE_WITH_LINEBREAK_CAPTION &&
                 node.children[1] &&
                 node.children[1].type === "text" &&
                 node.children[1].value.trim() === "" &&
                 isElement(node.children[2], "em")
             ) {
-                // Image with caption with line break
                 node.tagName = "figure";
                 node.children = [
                     firstChild,
@@ -115,16 +125,18 @@ const rehypeImageCaption: Plugin<[Options?], Root> = (options: Options = { wrapI
                         children: node.children[2].children
                     }
                 ];
-            } else if (
-                // eslint-disable-next-line no-magic-numbers
-                node.children.length === 4 &&
+                return;
+            }
+
+            // Image with caption with line break (with remark-breaks plugin)
+            if (
+                node.children.length === NodeChildrenCount.IMAGE_WITH_REMARK_BREAKS_CAPTION &&
                 isElement(node.children[1], "br") &&
                 node.children[2] &&
                 node.children[2].type === "text" &&
                 node.children[2].value.trim() === "" &&
                 isElement(node.children[3], "em")
             ) {
-                // Image with caption with line break (with remark-breaks plugin)
                 node.tagName = "figure";
                 node.children = [
                     firstChild,
