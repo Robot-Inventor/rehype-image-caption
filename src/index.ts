@@ -5,6 +5,15 @@ import type { Plugin, Transformer } from "unified";
 import { isElement } from "hast-util-is-element";
 import { visit } from "unist-util-visit";
 
+interface Options {
+    /**
+     * Wrap images without captions in a `<figure>` tag.
+     * If set to `false`, images without captions will not be wrapped in a `<figure>` tag.
+     * @default `true`
+     */
+    wrapImagesWithoutCaptions?: boolean;
+}
+
 /**
  * Check if a node is an image.
  * @param node Node to check
@@ -20,8 +29,10 @@ const isImage = (node: ElementContent): boolean => {
         return false;
     }
 };
+
 /**
  * `rehype` plugin to set captions for images in addition to alt text.
+ * @param options Options
  * @returns Transformer
  * @example
  *
@@ -53,7 +64,7 @@ const isImage = (node: ElementContent): boolean => {
  * ```
  */
 // eslint-disable-next-line max-lines-per-function
-const rehypeImageCaption: Plugin<[], Root> = () => {
+const rehypeImageCaption: Plugin<[Options?], Root> = (options: Options = { wrapImagesWithoutCaptions: true }) => {
     /**
      * Transformer
      * @param tree Root node
@@ -68,7 +79,7 @@ const rehypeImageCaption: Plugin<[], Root> = () => {
             if (!(node.tagName === "p" && isImage(firstChild))) return;
 
             // eslint-disable-next-line no-magic-numbers
-            if (node.children.length === 1) {
+            if (node.children.length === 1 && options.wrapImagesWithoutCaptions) {
                 // Image without caption
                 node.tagName = "figure";
                 node.children = [firstChild];
