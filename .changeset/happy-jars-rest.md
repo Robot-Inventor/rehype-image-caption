@@ -1,0 +1,5 @@
+---
+"rehype-image-caption": patch
+---
+
+ci: migrate from npm token to trusted publishing
