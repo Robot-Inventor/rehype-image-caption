@@ -1,5 +1,11 @@
 # rehype-image-caption
 
+## 2.1.1
+
+### Patch Changes
+
+- [#242](https://github.com/Robot-Inventor/rehype-image-caption/pull/242) [`2c3e442`](https://github.com/Robot-Inventor/rehype-image-caption/commit/2c3e442f9938acc1131bb68ac1305be210f59f7a) Thanks [@Robot-Inventor](https://github.com/Robot-Inventor)! - ci: migrate from npm token to trusted publishing
+
 ## 2.1.0
 
 ### Minor Changes
