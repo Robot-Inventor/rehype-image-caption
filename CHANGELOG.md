@@ -1,5 +1,11 @@
 # rehype-image-caption
 
+## 2.1.3
+
+### Patch Changes
+
+- [#277](https://github.com/Robot-Inventor/rehype-image-caption/pull/277) [`ee771de`](https://github.com/Robot-Inventor/rehype-image-caption/commit/ee771defb84573064bf801993fd5d4956a1f7f55) Thanks [@dependabot](https://github.com/apps/dependabot)! - build(deps): bump mdast-util-to-hast from 13.1.0 to 13.2.1
+
 ## 2.1.2
 
 ### Patch Changes
