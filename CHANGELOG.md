@@ -1,5 +1,11 @@
 # rehype-image-caption
 
+## 2.1.4
+
+### Patch Changes
+
+- [#287](https://github.com/Robot-Inventor/rehype-image-caption/pull/287) [`f5ec3f0`](https://github.com/Robot-Inventor/rehype-image-caption/commit/f5ec3f0d0e6a4d1459a0d83aec10c62e90c81ee0) Thanks [@renovate](https://github.com/apps/renovate)! - chore(deps): update dependency unist-util-visit to v5.1.0
+
 ## 2.1.3
 
 ### Patch Changes
