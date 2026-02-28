@@ -1,5 +1,11 @@
 # rehype-image-caption
 
+## 2.1.5
+
+### Patch Changes
+
+- [#294](https://github.com/Robot-Inventor/rehype-image-caption/pull/294) [`b6f1a44`](https://github.com/Robot-Inventor/rehype-image-caption/commit/b6f1a4419c6908da02152343d8fd75c963d4f238) Thanks [@dependabot](https://github.com/apps/dependabot)! - build(deps-dev): bump minimatch from 3.1.2 to 3.1.5
+
 ## 2.1.4
 
 ### Patch Changes
