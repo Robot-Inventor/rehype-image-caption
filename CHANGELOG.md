@@ -1,5 +1,11 @@
 # rehype-image-caption
 
+## 2.1.6
+
+### Patch Changes
+
+- [#301](https://github.com/Robot-Inventor/rehype-image-caption/pull/301) [`3dbf16d`](https://github.com/Robot-Inventor/rehype-image-caption/commit/3dbf16d2ba0d45f07360158b180aa8569af6d3f6) Thanks [@dependabot](https://github.com/apps/dependabot)! - build(deps-dev): bump flatted from 3.3.1 to 3.4.2
+
 ## 2.1.5
 
 ### Patch Changes
