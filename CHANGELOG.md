@@ -1,5 +1,11 @@
 # rehype-image-caption
 
+## 2.1.7
+
+### Patch Changes
+
+- [#306](https://github.com/Robot-Inventor/rehype-image-caption/pull/306) [`65051cf`](https://github.com/Robot-Inventor/rehype-image-caption/commit/65051cf22928f810289e46a880da1e647cd7632e) Thanks [@dependabot](https://github.com/apps/dependabot)! - build(deps): bump picomatch
+
 ## 2.1.6
 
 ### Patch Changes
