@@ -1,5 +1,11 @@
 # rehype-image-caption
 
+## 2.1.8
+
+### Patch Changes
+
+- [#311](https://github.com/Robot-Inventor/rehype-image-caption/pull/311) [`c3523cf`](https://github.com/Robot-Inventor/rehype-image-caption/commit/c3523cf2f2ab3932ef1286b73ad3e066767f2dee) Thanks [@Robot-Inventor](https://github.com/Robot-Inventor)! - refactor: use optional chain
+
 ## 2.1.7
 
 ### Patch Changes
