@@ -110,8 +110,7 @@ const rehypeImageCaption: Plugin<[Options?], Root> = (options: Options = { wrapI
             // Image with caption with line break
             if (
                 node.children.length === ImageChildCounts.IMAGE_WITH_LINEBREAK_CAPTION &&
-                node.children[1] &&
-                node.children[1].type === "text" &&
+                node.children[1]?.type === "text" &&
                 node.children[1].value.trim() === "" &&
                 isElement(node.children[2], "em")
             ) {
@@ -132,8 +131,7 @@ const rehypeImageCaption: Plugin<[Options?], Root> = (options: Options = { wrapI
             if (
                 node.children.length === ImageChildCounts.IMAGE_WITH_REMARK_BREAKS_CAPTION &&
                 isElement(node.children[1], "br") &&
-                node.children[2] &&
-                node.children[2].type === "text" &&
+                node.children[2]?.type === "text" &&
                 node.children[2].value.trim() === "" &&
                 isElement(node.children[3], "em")
             ) {
