@@ -51,7 +51,7 @@
   },
   "dependencies": {
     "hast-util-is-element": "^3.0.0",
-    "mdast-util-mdx-jsx": "^3.1.2",
+    "mdast-util-mdx-jsx": "^3.2.0",
     "rehype": "^13.0.1",
     "unified": "^11.0.4",
     "unist-util-visit": "^5.0.0"
