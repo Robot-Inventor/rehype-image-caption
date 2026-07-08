@@ -1,5 +1,21 @@
 # rehype-image-caption
 
+## 2.1.10
+
+### Patch Changes
+
+- [#355](https://github.com/Robot-Inventor/rehype-image-caption/pull/355) [`6850b15`](https://github.com/Robot-Inventor/rehype-image-caption/commit/6850b159a6a1d5ed64ee06722869cd7753482c2f) Thanks [@renovate](https://github.com/apps/renovate)! - fix(deps): update dependency rehype to ^13.0.2
+
+- [#351](https://github.com/Robot-Inventor/rehype-image-caption/pull/351) [`e52a344`](https://github.com/Robot-Inventor/rehype-image-caption/commit/e52a3442483e068225df3809948bd057eb9052c0) Thanks [@renovate](https://github.com/apps/renovate)! - chore(deps): update dependency remark-rehype to ^11.1.2
+
+- [#356](https://github.com/Robot-Inventor/rehype-image-caption/pull/356) [`f1c7524`](https://github.com/Robot-Inventor/rehype-image-caption/commit/f1c7524b95e1482a7658270a936211d8470053a9) Thanks [@renovate](https://github.com/apps/renovate)! - fix(deps): update dependency unified to ^11.0.5
+
+- [#354](https://github.com/Robot-Inventor/rehype-image-caption/pull/354) [`d871023`](https://github.com/Robot-Inventor/rehype-image-caption/commit/d87102330b152ca5ea24460dc4c0018c1eaa50c0) Thanks [@renovate](https://github.com/apps/renovate)! - fix(deps): update dependency mdast-util-mdx-jsx to ^3.2.0
+
+- [#357](https://github.com/Robot-Inventor/rehype-image-caption/pull/357) [`ef588e5`](https://github.com/Robot-Inventor/rehype-image-caption/commit/ef588e59caf7503e2cff42a366e6aba8f7e39a02) Thanks [@renovate](https://github.com/apps/renovate)! - fix(deps): update dependency unist-util-visit to ^5.1.0
+
+- [#350](https://github.com/Robot-Inventor/rehype-image-caption/pull/350) [`c08059c`](https://github.com/Robot-Inventor/rehype-image-caption/commit/c08059cc1b8a9a57368a5e36ae812707a194b739) Thanks [@renovate](https://github.com/apps/renovate)! - chore(deps): update dependency rehype-stringify to ^10.0.1
+
 ## 2.1.9
 
 ### Patch Changes
