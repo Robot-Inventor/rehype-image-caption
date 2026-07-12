@@ -41,7 +41,7 @@
     "@robot-inventor/eslint-config": "^13.0.0",
     "@robot-inventor/tsconfig-base": "^7.1.0",
     "eslint": "^10.7.0",
-    "prettier": "^3.9.4",
+    "prettier": "^3.9.5",
     "rehype-stringify": "^10.0.1",
     "remark-breaks": "^4.0.0",
     "remark-parse": "^11.0.0",
