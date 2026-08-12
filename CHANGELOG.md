@@ -1,5 +1,11 @@
 # rehype-image-caption
 
+## 2.1.11
+
+### Patch Changes
+
+- [#374](https://github.com/Robot-Inventor/rehype-image-caption/pull/374) [`1074e4a`](https://github.com/Robot-Inventor/rehype-image-caption/commit/1074e4a249477dc6eedd3d9d63f3de13ec19f7b4) Thanks [@Robot-Inventor](https://github.com/Robot-Inventor)! - chore: update vulnerable dependencies
+
 ## 2.1.10
 
 ### Patch Changes
