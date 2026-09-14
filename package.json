@@ -17,7 +17,7 @@
     "version": "npm run build && git add .",
     "format": "prettier ./src/ --write",
     "format:check": "prettier ./src/ --check",
-    "lint": "npx eslint ./src/**/*.ts",
+    "lint": "oxlint ./src",
     "ci:version": "changeset version && npm run version",
     "ci:publish": "npm run build && changeset publish"
   },
@@ -38,9 +38,9 @@
   "devDependencies": {
     "@changesets/changelog-github": "^1.0.1",
     "@changesets/cli": "^3.0.2",
-    "@robot-inventor/eslint-config": "^13.1.1",
+    "@robot-inventor/oxlint-config": "^0.2.0",
     "@robot-inventor/tsconfig-base": "^7.2.0",
-    "eslint": "^10.10.0",
+    "oxlint": "^1.83.0",
     "prettier": "^3.9.6",
     "rehype-stringify": "^10.0.1",
     "remark-breaks": "^4.0.0",
@@ -55,8 +55,5 @@
     "rehype": "^13.0.2",
     "unified": "^11.0.5",
     "unist-util-visit": "^5.1.0"
-  },
-  "overrides": {
-    "zod-validation-error": "^5.0.0"
   }
 }

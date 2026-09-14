@@ -1,4 +1,4 @@
-// eslint-disable-next-line import-x/no-unassigned-import
+// oxlint-disable-next-line import-x/no-unassigned-import
 import "mdast-util-mdx-jsx";
 import type { ElementContent, Root } from "hast";
 import type { Plugin, Transformer } from "unified";
@@ -70,15 +70,15 @@ const ImageChildCounts = {
  * </figure>
  * ```
  */
-// eslint-disable-next-line max-lines-per-function
+// oxlint-disable-next-line max-lines-per-function
 const rehypeImageCaption: Plugin<[Options?], Root> = (options: Options = { wrapImagesWithoutCaptions: true }) => {
     /**
      * Transformer
      * @param tree Root node
      */
-    // eslint-disable-next-line max-lines-per-function
+    // oxlint-disable-next-line max-lines-per-function
     const transformer: Transformer<Root> = (tree) => {
-        // eslint-disable-next-line max-lines-per-function, max-statements
+        // oxlint-disable-next-line max-lines-per-function, max-statements
         visit(tree, "element", (node) => {
             const [firstChild] = node.children;
             if (!firstChild) return;
