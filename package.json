@@ -47,7 +47,7 @@
     "remark-parse": "^11.0.0",
     "remark-rehype": "^11.1.2",
     "typescript": "^7.0.2",
-    "vitest": "^5.0.0"
+    "vitest": "^5.0.1"
   },
   "dependencies": {
     "hast-util-is-element": "^3.0.0",
