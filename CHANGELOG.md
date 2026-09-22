@@ -1,5 +1,11 @@
 # rehype-image-caption
 
+## 2.1.12
+
+### Patch Changes
+
+- [#400](https://github.com/Robot-Inventor/rehype-image-caption/pull/400) [`d9ba687`](https://github.com/Robot-Inventor/rehype-image-caption/commit/d9ba6870667ab09a4f1a5405eac42d977456d938) Thanks [@Robot-Inventor](https://github.com/Robot-Inventor)! - chore: remove unused oxlint-disable comments
+
 ## 2.1.11
 
 ### Patch Changes
