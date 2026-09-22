@@ -70,15 +70,12 @@ const ImageChildCounts = {
  * </figure>
  * ```
  */
-// oxlint-disable-next-line max-lines-per-function
 const rehypeImageCaption: Plugin<[Options?], Root> = (options: Options = { wrapImagesWithoutCaptions: true }) => {
     /**
      * Transformer
      * @param tree Root node
      */
-    // oxlint-disable-next-line max-lines-per-function
     const transformer: Transformer<Root> = (tree) => {
-        // oxlint-disable-next-line max-lines-per-function, max-statements
         visit(tree, "element", (node) => {
             const [firstChild] = node.children;
             if (!firstChild) return;
