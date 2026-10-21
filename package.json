@@ -40,7 +40,7 @@
     "@changesets/cli": "^3.0.3",
     "@robot-inventor/oxlint-config": "^0.5.2",
     "@robot-inventor/tsconfig-base": "^7.2.0",
-    "oxlint": "^1.87.0",
+    "oxlint": "^1.89.0",
     "prettier": "^3.9.10",
     "rehype-stringify": "^10.0.1",
     "remark-breaks": "^4.0.0",
