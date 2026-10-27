@@ -70,7 +70,11 @@ const ImageChildCounts = {
  * </figure>
  * ```
  */
-const rehypeImageCaption: Plugin<[Options?], Root> = (options: Options = { wrapImagesWithoutCaptions: true }) => {
+const rehypeImageCaption: Plugin<[Options?], Root> = (
+    options: Options = {
+        wrapImagesWithoutCaptions: true
+    }
+) => {
     /**
      * Transformer
      * @param tree Root node
