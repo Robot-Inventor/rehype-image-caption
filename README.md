@@ -17,11 +17,7 @@ import remarkRehype from "remark-rehype";
 import { unified } from "unified";
 import rehypeImageCaption from "rehype-image-caption";
 
-const processor = unified()
-    .use(remarkParse)
-    .use(remarkRehype)
-    .use(rehypeImageCaption)
-    .use(rehypeStringify);
+const processor = unified().use(remarkParse).use(remarkRehype).use(rehypeImageCaption).use(rehypeStringify);
 
 const markdown = `
 ![alt text](image.jpg)
@@ -41,14 +37,14 @@ The above code will output the following:
 
 ```html
 <figure>
-    <img src="image.jpg" alt="alt text">
+    <img src="image.jpg" alt="alt text" />
 </figure>
 <figure>
-    <img src="image.jpg" alt="alt text">
+    <img src="image.jpg" alt="alt text" />
     <figcaption>caption text</figcaption>
 </figure>
 <figure>
-    <img src="image.jpg" alt="alt text">
+    <img src="image.jpg" alt="alt text" />
     <figcaption>caption text</figcaption>
 </figure>
 ```

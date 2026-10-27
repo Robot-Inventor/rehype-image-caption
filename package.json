@@ -2,52 +2,38 @@
   "name": "rehype-image-caption",
   "version": "2.1.13",
   "description": "rehype plugin to set captions for images in addition to alt text.",
-  "publishConfig": {
-    "provenance": true
-  },
-  "main": "./dist/index.js",
-  "types": "./dist/index.d.ts",
-  "files": [
-    "./dist/"
-  ],
-  "type": "module",
-  "scripts": {
-    "test": "vitest",
-    "build": "tsc",
-    "version": "npm run build && git add .",
-    "format": "prettier ./src/ --write",
-    "format:check": "prettier ./src/ --check",
-    "lint": "oxlint ./src",
-    "ci:version": "changeset version && npm run version",
-    "ci:publish": "npm run build && changeset publish"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/Robot-Inventor/rehype-image-caption.git"
-  },
   "keywords": [
     "rehype",
     "rehype-plugin"
   ],
-  "author": "Robot-Inventor",
-  "license": "MIT",
+  "homepage": "https://github.com/Robot-Inventor/rehype-image-caption#readme",
   "bugs": {
     "url": "https://github.com/Robot-Inventor/rehype-image-caption/issues"
   },
-  "homepage": "https://github.com/Robot-Inventor/rehype-image-caption#readme",
-  "devDependencies": {
-    "@changesets/changelog-github": "^1.0.1",
-    "@changesets/cli": "^3.0.3",
-    "@robot-inventor/oxlint-config": "^1.0.0",
-    "@robot-inventor/tsconfig-base": "^7.2.0",
-    "oxlint": "^1.90.0",
-    "prettier": "^3.9.10",
-    "rehype-stringify": "^10.0.1",
-    "remark-breaks": "^4.0.0",
-    "remark-parse": "^11.0.0",
-    "remark-rehype": "^11.1.2",
-    "typescript": "^7.0.2",
-    "vitest": "^5.0.5"
+  "license": "MIT",
+  "author": "Robot-Inventor",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Robot-Inventor/rehype-image-caption.git"
+  },
+  "files": [
+    "./dist/"
+  ],
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "publishConfig": {
+    "provenance": true
+  },
+  "scripts": {
+    "test": "vitest",
+    "build": "tsc",
+    "version": "npm run build && git add .",
+    "format": "oxfmt --write .",
+    "format:check": "oxfmt --check .",
+    "lint": "oxlint ./src",
+    "ci:version": "changeset version && npm run version",
+    "ci:publish": "npm run build && changeset publish"
   },
   "dependencies": {
     "hast-util-is-element": "^3.0.0",
@@ -55,5 +41,19 @@
     "rehype": "^13.0.2",
     "unified": "^11.0.5",
     "unist-util-visit": "^5.2.0"
+  },
+  "devDependencies": {
+    "@changesets/changelog-github": "^1.0.1",
+    "@changesets/cli": "^3.0.3",
+    "@robot-inventor/oxlint-config": "^1.0.0",
+    "@robot-inventor/tsconfig-base": "^7.2.0",
+    "oxfmt": "^0.75.0",
+    "oxlint": "^1.90.0",
+    "rehype-stringify": "^10.0.1",
+    "remark-breaks": "^4.0.0",
+    "remark-parse": "^11.0.0",
+    "remark-rehype": "^11.1.2",
+    "typescript": "^7.0.2",
+    "vitest": "^5.0.5"
   }
 }
