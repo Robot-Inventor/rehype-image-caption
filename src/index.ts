@@ -108,13 +108,13 @@ const rehypeImageCaption: Plugin<[Options?], Root> = (
                 return;
             }
 
-            // Image with caption with line break
-            if (
+            const isImageWithLineBreak =
                 node.children.length === ImageChildCounts.IMAGE_WITH_LINEBREAK_CAPTION &&
                 node.children[1]?.type === "text" &&
-                node.children[1].value.trim() === "" &&
-                isElement(node.children[2], "em")
-            ) {
+                node.children[1].value.trim() === "";
+
+            // Image with caption with line break
+            if (isImageWithLineBreak && isElement(node.children[2], "em")) {
                 node.tagName = "figure";
                 node.children = [
                     firstChild,
@@ -128,14 +128,14 @@ const rehypeImageCaption: Plugin<[Options?], Root> = (
                 return;
             }
 
-            // Image with caption with line break (with remark-breaks plugin)
-            if (
+            const isImageWithRemarkBreaks =
                 node.children.length === ImageChildCounts.IMAGE_WITH_REMARK_BREAKS_CAPTION &&
                 isElement(node.children[1], "br") &&
                 node.children[2]?.type === "text" &&
-                node.children[2].value.trim() === "" &&
-                isElement(node.children[3], "em")
-            ) {
+                node.children[2].value.trim() === "";
+
+            // Image with caption with line break (with remark-breaks plugin)
+            if (isImageWithRemarkBreaks && isElement(node.children[3], "em")) {
                 node.tagName = "figure";
                 node.children = [
                     firstChild,
