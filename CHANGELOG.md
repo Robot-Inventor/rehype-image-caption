@@ -1,5 +1,11 @@
 # rehype-image-caption
 
+## 2.1.14
+
+### Patch Changes
+
+- [#425](https://github.com/Robot-Inventor/rehype-image-caption/pull/425) [`5bb7e53`](https://github.com/Robot-Inventor/rehype-image-caption/commit/5bb7e532012bb18ba6546ca362d624023ccd2350) Thanks [@Robot-Inventor](https://github.com/Robot-Inventor)! - refactor: extract complex conditions
+
 ## 2.1.13
 
 ### Patch Changes
