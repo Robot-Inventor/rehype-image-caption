@@ -31,7 +31,7 @@
     "version": "npm run build && git add .",
     "format": "oxfmt --write .",
     "format:check": "oxfmt --check .",
-    "lint": "oxlint ./src",
+    "lint": "oxlint src",
     "ci:version": "changeset version && npm run version",
     "ci:publish": "npm run build && changeset publish"
   },

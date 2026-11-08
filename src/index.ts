@@ -24,6 +24,7 @@ const isImage = (node: ElementContent): boolean => {
         if (node.type === "mdxJsxFlowElement" && ["astro-image", "img"].includes(node.name ?? "")) {
             return true;
         }
+
         return isElement(node, "img");
     } catch {
         return false;
@@ -90,6 +91,7 @@ const rehypeImageCaption: Plugin<[Options?], Root> = (
             if (node.children.length === ImageChildCounts.SINGLE_IMAGE && options.wrapImagesWithoutCaptions) {
                 node.tagName = "figure";
                 node.children = [firstChild];
+
                 return;
             }
 
@@ -105,6 +107,7 @@ const rehypeImageCaption: Plugin<[Options?], Root> = (
                         children: node.children[1].children
                     }
                 ];
+
                 return;
             }
 
@@ -125,6 +128,7 @@ const rehypeImageCaption: Plugin<[Options?], Root> = (
                         children: node.children[2].children
                     }
                 ];
+
                 return;
             }
 
