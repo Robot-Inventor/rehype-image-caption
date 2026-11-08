@@ -48,7 +48,7 @@
     "@robot-inventor/oxlint-config": "^2.1.1",
     "@robot-inventor/tsconfig-base": "^7.2.0",
     "oxfmt": "^0.77.0",
-    "oxlint": "^1.90.0",
+    "oxlint": "^1.92.0",
     "rehype-stringify": "^10.0.1",
     "remark-breaks": "^4.0.0",
     "remark-parse": "^11.0.0",
