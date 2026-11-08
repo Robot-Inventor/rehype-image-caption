@@ -1,5 +1,11 @@
 # rehype-image-caption
 
+## 2.1.15
+
+### Patch Changes
+
+- [#427](https://github.com/Robot-Inventor/rehype-image-caption/pull/427) [`2810652`](https://github.com/Robot-Inventor/rehype-image-caption/commit/2810652d1c448b08944b69e4360ce768de9b4d0b) Thanks [@renovate](https://github.com/apps/renovate)! - fix(deps): update dependency mdast-util-mdx-jsx to ^3.2.1
+
 ## 2.1.14
 
 ### Patch Changes

@@ -1,6 +1,6 @@
 {
   "name": "rehype-image-caption",
-  "version": "2.1.14",
+  "version": "2.1.15",
   "description": "rehype plugin to set captions for images in addition to alt text.",
   "keywords": [
     "rehype",
